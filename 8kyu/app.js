@@ -170,3 +170,32 @@ function numberToPower(number, power) {
 //Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages. Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
 const paperwork = (n, m) => (n < 0 || m < 0 ? 0 : n * m);
+
+/**Your task is to create a function that does four basic mathematical operations.
+
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation. */
+
+const basicOp = (operation, value1, value2) => {
+	switch (operation) {
+		case '+':
+			return value1 + value2;
+			break;
+		case '-':
+			return value1 - value2;
+			break;
+		case '*':
+			return value1 * value2;
+			break;
+		case '/':
+			return value1 / value2;
+			break;
+	}
+	// more clever than my solution => basicOp = (operation, value1, value2) => eval( `${value1} ${operation} ${value2}` )
+};
+
+
+//Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+const invert = arr => arr.map(num => (num > 0 ? ~num + 1 : ~num + 1));
+
+
