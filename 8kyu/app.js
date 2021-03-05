@@ -199,3 +199,14 @@ const basicOp = (operation, value1, value2) => {
 const invert = arr => arr.map(num => (num > 0 ? ~num + 1 : ~num + 1));
 
 
+//Write a function to split a string and convert it into an array of words. For example:
+const stringToArray = s => s.split(' ');
+
+/**A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+Return True if yes, False otherwise :) */
+
+const hero = (bullet, dragon) => (bullet >= dragon * 2 ? true : false);
+
+//Write a function which takes a number and returns the corresponding ASCII char for that value.
+const getChar = str => String.fromCharCode(str);
