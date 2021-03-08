@@ -210,3 +210,48 @@ const hero = (bullet, dragon) => (bullet >= dragon * 2 ? true : false);
 
 //Write a function which takes a number and returns the corresponding ASCII char for that value.
 const getChar = str => String.fromCharCode(str);
+
+/**It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters. */
+const removeChar = str => str.substring(1, str.length - 1);
+
+
+//Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+const summation = num => {
+	let sum = 0;
+	for (let i = 1; i <= num; i++) {
+		sum += i;
+	}
+	return sum;
+};
+
+
+//Your task is to make two functions, max and min (maximum and minimum in PHP and Python) that take a(n) array/vector of integers list as input and outputs, respectively, the largest and lowest number in that array/vector.
+const max = arr => arr.reduce((accum, val) => Math.max(accum, val));
+const min = arr => arr.reduce((accum, val) => Math.min(accum, val));
+
+//Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+const countingSheep = arr => {
+	let counter = 0;
+	arr.forEach(function (el) {
+		if (el === true) {
+			counter++;
+		}
+	});
+
+	return counter;
+};
+
+//The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+const century = year =>
+	year < 1900 ? Math.floor(year / 100 + 1) : Math.ceil(year / 100);
+
+
+	//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
+
+	const abbrevName = str =>
+		str
+			.split(' ')
+			.map(name => name[0].toUpperCase())
+			.join('.');
