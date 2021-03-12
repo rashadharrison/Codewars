@@ -118,3 +118,19 @@ You need to cast the whole array to the correct type.
 Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers. */
 
 const toNumberArray = num => Array.from(num, Number);
+
+
+
+
+String.prototype.toJadenCase = function () {
+	//String.prototype = object
+	//convert "this" string to an array
+	//convert letter at index 0 to toUpperCase
+	//return new array with lowcased letters
+	//join both arrays
+	return this.split(' ')
+		.map(n => {
+			return n[0].toUpperCase() + n.slice(1);
+		})
+		.join(' ');
+};
