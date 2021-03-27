@@ -22,29 +22,28 @@ class SmallestIntegerFinder {
 	}
 }
 
-
 /**Create a function which answers the question "Are you playing banjo?".
 If your name starts with the letter "R" or lower case "r", you are playing banjo!
 
 The function takes a name as its only argument, and returns one of the following strings: */
 
-
-const areYouPlayingBanjo = name => name[0] === 'R' || name[0] === 'r' ? name + ' plays banjo' : name + ' does not play banjo'
+const areYouPlayingBanjo = name =>
+	name[0] === 'R' || name[0] === 'r'
+		? name + ' plays banjo'
+		: name + ' does not play banjo';
 
 /**Create a method sayHello/say_hello/SayHello that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
  */
 
 const sayHello = (name, city, state) =>
-  `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
-  
+	`Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
 
-  /**I would like to be able to pass an array with two elements to my swapValues function to swap the values. However it appears that the values aren't changing.
+/**I would like to be able to pass an array with two elements to my swapValues function to swap the values. However it appears that the values aren't changing.
 
 Can you figure out what's wrong here? */
 
 const swapValues = arr => arr.reverse();
-
 
 /**Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers. */
 const even_or_odd = n => (n % 2 ? 'Odd' : 'Even');
@@ -72,17 +71,17 @@ Numbers may be positive or negative, integers or floats.
 Floats are considered UNeven for this kata.
 
  */
-  const testEven = n => {
-		if (n % 2 === 0) {
-			return true;
-		} else if (n < 0 || n % 2 !== 0) {
-			return false;
-		}
-  };
- 
-  //convert number to string
+const testEven = n => {
+	if (n % 2 === 0) {
+		return true;
+	} else if (n < 0 || n % 2 !== 0) {
+		return false;
+	}
+};
+
+//convert number to string
 const stringToNumber = str => +str;
-  
+
 //reverse list order
 const reverseList = n => n.reverse('');
 
@@ -99,12 +98,11 @@ const squareSum = n => {
 	return n.map(item => item * item).reduce((sum, item) => sum + item, 0);
 };
 
-
 //is n divisible by x and y?
 
 const isDivisible = (n, x, y) => (n % x === 0 && n % y === 0 ? true : false);
 
-//remove string spaces 
+//remove string spaces
 
 const noSpace = x => x.replace(/\s+/g, '');
 
@@ -126,14 +124,12 @@ const sum = arr => arr.reduce((acc, item) => acc + item, 0);
 //This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 const simpleMultiplication = n => (n % 2 ? n * 9 : n * 8);
 
-
 /**Provided is a function find which accepts two parameters in the following order: array, element and returns the index of the element if found and "Not found" otherwise. Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. (no more than 85) You may assume that all array elements are unique. */
 
 const find = (array, element) =>
 	!array.includes(element) ? 'Not found' : array.indexOf(element);
 
-
-  /**You're re-designing a blog and the blog's posts have the following format for showing the date and time a post was made:
+/**You're re-designing a blog and the blog's posts have the following format for showing the date and time a post was made:
 
 Weekday Month Day, time e.g., Friday May 2, 7pm
 
@@ -150,16 +146,14 @@ function shortenToDate(longDate) {
 
 function getAverage(marks) {
 	return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
-
 }
 
 /**Write a function called repeat_str which repeats the given string src exactly count times. */
 const repeatStr = (n, s) => s.repeat(n);
-	
+
 /**You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0. */
 
 const index = (arr, n) => (n >= arr.length ? -1 : Math.pow(arr[n], n));
-
 
 //The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
 
@@ -194,10 +188,8 @@ const basicOp = (operation, value1, value2) => {
 	// more clever than my solution => basicOp = (operation, value1, value2) => eval( `${value1} ${operation} ${value2}` )
 };
 
-
 //Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 const invert = arr => arr.map(num => (num > 0 ? ~num + 1 : ~num + 1));
-
 
 //Write a function to split a string and convert it into an array of words. For example:
 const stringToArray = s => s.split(' ');
@@ -214,7 +206,6 @@ const getChar = str => String.fromCharCode(str);
 /**It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters. */
 const removeChar = str => str.substring(1, str.length - 1);
 
-
 //Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
 const summation = num => {
@@ -224,7 +215,6 @@ const summation = num => {
 	}
 	return sum;
 };
-
 
 //Your task is to make two functions, max and min (maximum and minimum in PHP and Python) that take a(n) array/vector of integers list as input and outputs, respectively, the largest and lowest number in that array/vector.
 const max = arr => arr.reduce((accum, val) => Math.max(accum, val));
@@ -247,34 +237,37 @@ const countingSheep = arr => {
 const century = year =>
 	year < 1900 ? Math.floor(year / 100 + 1) : Math.ceil(year / 100);
 
+//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
 
-	//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
-
-	const abbrevName = str =>
-		str
-			.split(' ')
-			.map(name => name[0].toUpperCase())
-			.join('.');
-
+const abbrevName = str =>
+	str
+		.split(' ')
+		.map(name => name[0].toUpperCase())
+		.join('.');
 
 //Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
-			const countPositivesSumNegatives = arr => {
-				if (arr === null || arr.length < 1) {
-					return [];
-				}
+const countPositivesSumNegatives = arr => {
+	if (arr === null || arr.length < 1) {
+		return [];
+	}
 
-				const newarr = [0, 0];
+	const newarr = [0, 0];
 
-				arr.forEach(num => {
-					if (num <= 0) {
-						newarr[1] += num;
-					} else {
-						newarr[0] += 1;
-					}
-				});
+	arr.forEach(num => {
+		if (num <= 0) {
+			newarr[1] += num;
+		} else {
+			newarr[0] += 1;
+		}
+	});
 
-				return newarr;
-			};
+	return newarr;
+};
 
 //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
-			const sumMix = x => x.map(num => +num).reduce((acc, val) => acc + val);
+const sumMix = x => x.map(num => +num).reduce((acc, val) => acc + val);
+
+//Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+const divisibleBy = (numbers, divisor) =>
+	numbers.filter(num => num % divisor === 0);
