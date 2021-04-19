@@ -134,3 +134,12 @@ String.prototype.toJadenCase = function () {
 		})
 		.join(' ');
 };
+
+//In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+function highAndLow(numbers) {
+	const arr = numbers.split(' ').map(Number);
+	return `${Math.max(...arr)} ${Math.min(...arr)}`;
+}
+
+//Simple, given a string of words, return the length of the shortest word(s).
+const findShort = s => Math.min(...s.split` `.map(w => w.length)) | 0;

@@ -111,4 +111,4 @@ function digital_root(n) {
 function spinWords(arr) {
 return arr.split(' ').map(word => word.length >= 5 ? [...word].reverse().join(''): word).join(' ')
   
-}
+} //FSA
