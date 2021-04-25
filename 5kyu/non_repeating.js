@@ -1,15 +1,3 @@
-//Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
-
-const moveZeros = arr => {
-	let count = [];
-	arr.forEach((el, i) => (el === 0 ? count.push(i) : void 0));
-	count = count.reverse();
-	zeroArr = count.map(() => 0);
-	count.forEach(el => arr.splice(el, 1));
-	arr.push(...zeroArr);
-	return arr;
-};
-
 /**Write a function named first_non_repeating_letter that takes a string input, and returns the first character that is not repeated anywhere in the string.
 
 For example, if given the input 'stress', the function should return 't', since the letter t only occurs once in the string, and occurs first in the string.
