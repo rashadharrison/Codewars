@@ -11,6 +11,4 @@ const mergeArrays = (arr1, arr2) => {
   const b = new Set(a)
 
   return [...b]
-
-
 }
